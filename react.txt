@@ -1,0 +1,155 @@
+______________________________________________________________________________________________
+
+DESAFIO DE LISTAS EM REACT
+______________________________________________________________________________________________
+
+1. Adicionar Elemento
+Utilize useState para criar um estado para a lista e setList para adicionar novos objetos. 
+O objeto adicionado deve ter propriedades como nome, idade etc.
+______________________________________________________________________________________________
+
+2. Remover o Último Elemento
+Implemente um botão que, ao ser clicado, utiliza setList para remover o último item da lista, 
+utilizando o método pop.
+______________________________________________________________________________________________
+
+3. Encontrar Item Específico
+Implemente uma função que use o método find para buscar um item específico, 
+com base em um valor (por exemplo, o nome). Mostre o resultado no JSX.
+______________________________________________________________________________________________
+
+4. Filtrar por Atributo
+Crie um campo de texto onde o usuário pode digitar um valor para filtrar a lista
+por um atributo específico (como idade). 
+Use filter para criar um novo array com base nesse parâmetro.
+______________________________________________________________________________________________
+
+5. Verificar Existência de um Valor
+Usando includes e map, verifique se um valor específico existe dentro de um atributo 
+dos objetos (por exemplo, se um nome específico está na lista). 
+Mostre um aviso no JSX se o valor existir.
+______________________________________________________________________________________________
+
+6. Obter Índices de Objetos Específicos
+Mostre em uma lista os índices dos objetos, utilizando map em conjunto com indexOf.
+______________________________________________________________________________________________
+
+7. Concatenar Listas
+Crie uma função que concatene duas listas de objetos usando concat, 
+e mostre a nova lista no JSX.
+______________________________________________________________________________________________
+
+8. Achatar uma Lista de Listas
+Se a lista contiver listas aninhadas, use flat para transformá-las em uma única lista. 
+Exiba a lista achatada no JSX.
+______________________________________________________________________________________________
+
+9. Mapear para Requisitos Específicos
+Use map para criar uma nova lista que contenha apenas um atributo de cada objeto 
+(por exemplo, apenas os nomes).
+______________________________________________________________________________________________
+
+10. Mapear e Achatar Atributos
+Use flatMap para criar uma lista com todos os atributos específicos de cada objeto, 
+removendo duplicidades e achando listas aninhadas.
+______________________________________________________________________________________________
+
+11. Iterar sobre a Lista
+Utilize forEach para iterar sobre cada objeto da lista e exibir os valores no JSX.
+______________________________________________________________________________________________
+
+12. Converter Lista em String
+Use join para converter a lista de objetos em uma única string, 
+com os nomes separados por vírgulas.
+______________________________________________________________________________________________
+
+13. Reduzir a Lista
+Use reduce para calcular, por exemplo, a soma das idades dos objetos na lista 
+e exiba o total.
+______________________________________________________________________________________________
+
+14. Obter Parte da Lista
+Use slice para retornar e exibir uma parte específica da lista 
+(por exemplo, os três primeiros objetos).
+______________________________________________________________________________________________
+
+15. Adicionar e Remover em Posições Específicas
+Implemente uma função que utilize splice para adicionar ou remover objetos em posições 
+específicas da lista.
+______________________________________________________________________________________________
+
+16. Obter Chaves dos Objetos na Lista
+Use Object.keys para obter as chaves dos objetos na lista e mostrá-las no JSX.
+______________________________________________________________________________________________
+
+17. Espalhar Elementos da Lista
+Use o spread operator (...) para criar uma cópia da lista e adicionar novos objetos à cópia.
+______________________________________________________________________________________________
+
+18. Converter a Lista para String
+Utilize toString para converter o array de objetos em uma string.
+______________________________________________________________________________________________
+
+19. Iterar sobre Valores da Lista
+Use Object.values para iterar sobre os valores de cada objeto da lista e exibi-los.
+______________________________________________________________________________________________
+
+20. Exemplo de Implementação
+Implemente todas as funções acima em um único componente React. 
+Cada função deve ser acionada por botões e as alterações devem ser refletidas na interface.
+______________________________________________________________________________________________
+
+DESAFIO EXTRA
+______________________________________________________________________________________________
+
+Crie uma interface simples com os seguintes elementos:
+
+Campos de entrada para o usuário adicionar e filtrar objetos na lista.
+Botões para acionar as funções de adicionar, remover, filtrar e iterar sobre a lista.
+Exibição dinâmica dos dados, com a lista sendo renderizada de forma visual no JSX sempre 
+que houver uma alteração.
+
+Exemplo de Estrutura do Componente:
+jsx
+Copiar código
+import React, { useState } from "react";
+
+function ListaDeObjetos() {
+  const [list, setList] = useState([]);
+
+  // Função para adicionar item
+  const addItem = (item) => {
+    setList([...list, item]);
+  };
+
+  // Função para remover último item
+  const removeLastItem = () => {
+    setList(list.slice(0, -1));
+  };
+
+  // Função para encontrar item
+  const findItem = (nome) => {
+    return list.find((item) => item.nome === nome);
+  };
+
+  // Exemplo JSX para interação
+  return (
+    <div>
+      <h1>Lista de Objetos</h1>
+      <button onClick={() => addItem({ nome: "Item", idade: 25 })}>
+        Adicionar Item
+      </button>
+      <button onClick={removeLastItem}>Remover Último Item</button>
+      <div>
+        {list.map((item, index) => (
+          <p key={index}>{item.nome}</p>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default ListaDeObjetos;
+Neste exemplo, você pode adicionar funções adicionais, como filtrar, mapear, reduzir, etc. 
+conforme descrito no desafio.
+______________________________________________________________________________________________
