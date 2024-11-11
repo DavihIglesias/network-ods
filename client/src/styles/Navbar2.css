@@ -1,0 +1,55 @@
+.navbar2 {
+    width: 98%;
+    height: 70px;
+    background-color: #5271FF;
+    border-radius: 30px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    display: flex;
+}
+
+.navbar2-link {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.navbar2-link a {
+    margin-right: 50px;
+    font-size: 24px;
+    color: black;
+}
+
+.navbar2-link a:hover {
+    text-decoration: underline;
+    transition: linear;
+}
+
+.busca {
+    position: relative;
+    width: 300px;
+    margin-top: 15px;
+    left: 200px;
+}
+
+.busca-input {
+    width: 100%;
+    padding: 10px 40px 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    outline: none;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.busca-icon {
+    position: absolute;
+    top: 40%;
+    right: 15px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #888;
+    pointer-events: none;
+}
