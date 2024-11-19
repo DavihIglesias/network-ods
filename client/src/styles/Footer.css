@@ -1,0 +1,35 @@
+footer {
+    display: flex;
+    gap: 30px;
+    background-color: #5271FF;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    padding-top: 10px;
+}
+
+.start-footer, .footer-links {
+    max-width: 33%;
+}
+
+.start-footer h3 {
+    font-size: 24px;
+    padding-bottom: 10px;
+}
+
+.start-footer p {
+    padding-bottom: 20px;
+    width: 90%;
+    margin: 0;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+}
+.footer-links h4{
+    font-size: 20px;
+    padding: 10px;
+}
+
+.footer-links a {
+    padding-bottom: 10px;
+}
